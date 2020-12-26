@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73989CDF2597AF8200BDA7A0 /* WoltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CDE2597AF8200BDA7A0 /* WoltApp.swift */; };
+		73989CE12597AF8200BDA7A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CE02597AF8200BDA7A0 /* ContentView.swift */; };
+		73989CE32597AF8700BDA7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73989CE22597AF8700BDA7A0 /* Assets.xcassets */; };
+		73989CE62597AF8700BDA7A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73989CE52597AF8700BDA7A0 /* Preview Assets.xcassets */; };
+		73989CF12597AF8800BDA7A0 /* WoltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CF02597AF8800BDA7A0 /* WoltTests.swift */; };
+		73989CFC2597AF8800BDA7A0 /* WoltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CFB2597AF8800BDA7A0 /* WoltUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73989CED2597AF8800BDA7A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73989CD32597AF8100BDA7A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73989CDA2597AF8200BDA7A0;
+			remoteInfo = Wolt;
+		};
+		73989CF82597AF8800BDA7A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73989CD32597AF8100BDA7A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73989CDA2597AF8200BDA7A0;
+			remoteInfo = Wolt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		73989CDB2597AF8200BDA7A0 /* Wolt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wolt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73989CDE2597AF8200BDA7A0 /* WoltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoltApp.swift; sourceTree = "<group>"; };
+		73989CE02597AF8200BDA7A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		73989CE22597AF8700BDA7A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73989CE52597AF8700BDA7A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		73989CE72597AF8700BDA7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73989CEC2597AF8800BDA7A0 /* WoltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73989CF02597AF8800BDA7A0 /* WoltTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoltTests.swift; sourceTree = "<group>"; };
+		73989CF22597AF8800BDA7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73989CF72597AF8800BDA7A0 /* WoltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73989CFB2597AF8800BDA7A0 /* WoltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoltUITests.swift; sourceTree = "<group>"; };
+		73989CFD2597AF8800BDA7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73989CD82597AF8200BDA7A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73989CE92597AF8800BDA7A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73989CF42597AF8800BDA7A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73989CD22597AF8100BDA7A0 = {
+			isa = PBXGroup;
+			children = (
+				73989CDD2597AF8200BDA7A0 /* Wolt */,
+				73989CEF2597AF8800BDA7A0 /* WoltTests */,
+				73989CFA2597AF8800BDA7A0 /* WoltUITests */,
+				73989CDC2597AF8200BDA7A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		73989CDC2597AF8200BDA7A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73989CDB2597AF8200BDA7A0 /* Wolt.app */,
+				73989CEC2597AF8800BDA7A0 /* WoltTests.xctest */,
+				73989CF72597AF8800BDA7A0 /* WoltUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73989CDD2597AF8200BDA7A0 /* Wolt */ = {
+			isa = PBXGroup;
+			children = (
+				73989CDE2597AF8200BDA7A0 /* WoltApp.swift */,
+				73989CE02597AF8200BDA7A0 /* ContentView.swift */,
+				73989CE22597AF8700BDA7A0 /* Assets.xcassets */,
+				73989CE72597AF8700BDA7A0 /* Info.plist */,
+				73989CE42597AF8700BDA7A0 /* Preview Content */,
+			);
+			path = Wolt;
+			sourceTree = "<group>";
+		};
+		73989CE42597AF8700BDA7A0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				73989CE52597AF8700BDA7A0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		73989CEF2597AF8800BDA7A0 /* WoltTests */ = {
+			isa = PBXGroup;
+			children = (
+				73989CF02597AF8800BDA7A0 /* WoltTests.swift */,
+				73989CF22597AF8800BDA7A0 /* Info.plist */,
+			);
+			path = WoltTests;
+			sourceTree = "<group>";
+		};
+		73989CFA2597AF8800BDA7A0 /* WoltUITests */ = {
+			isa = PBXGroup;
+			children = (
+				73989CFB2597AF8800BDA7A0 /* WoltUITests.swift */,
+				73989CFD2597AF8800BDA7A0 /* Info.plist */,
+			);
+			path = WoltUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73989CDA2597AF8200BDA7A0 /* Wolt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73989D002597AF8800BDA7A0 /* Build configuration list for PBXNativeTarget "Wolt" */;
+			buildPhases = (
+				73989CD72597AF8200BDA7A0 /* Sources */,
+				73989CD82597AF8200BDA7A0 /* Frameworks */,
+				73989CD92597AF8200BDA7A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wolt;
+			productName = Wolt;
+			productReference = 73989CDB2597AF8200BDA7A0 /* Wolt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		73989CEB2597AF8800BDA7A0 /* WoltTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73989D032597AF8800BDA7A0 /* Build configuration list for PBXNativeTarget "WoltTests" */;
+			buildPhases = (
+				73989CE82597AF8800BDA7A0 /* Sources */,
+				73989CE92597AF8800BDA7A0 /* Frameworks */,
+				73989CEA2597AF8800BDA7A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73989CEE2597AF8800BDA7A0 /* PBXTargetDependency */,
+			);
+			name = WoltTests;
+			productName = WoltTests;
+			productReference = 73989CEC2597AF8800BDA7A0 /* WoltTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		73989CF62597AF8800BDA7A0 /* WoltUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73989D062597AF8800BDA7A0 /* Build configuration list for PBXNativeTarget "WoltUITests" */;
+			buildPhases = (
+				73989CF32597AF8800BDA7A0 /* Sources */,
+				73989CF42597AF8800BDA7A0 /* Frameworks */,
+				73989CF52597AF8800BDA7A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73989CF92597AF8800BDA7A0 /* PBXTargetDependency */,
+			);
+			name = WoltUITests;
+			productName = WoltUITests;
+			productReference = 73989CF72597AF8800BDA7A0 /* WoltUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73989CD32597AF8100BDA7A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					73989CDA2597AF8200BDA7A0 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					73989CEB2597AF8800BDA7A0 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 73989CDA2597AF8200BDA7A0;
+					};
+					73989CF62597AF8800BDA7A0 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 73989CDA2597AF8200BDA7A0;
+					};
+				};
+			};
+			buildConfigurationList = 73989CD62597AF8100BDA7A0 /* Build configuration list for PBXProject "Wolt" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 73989CD22597AF8100BDA7A0;
+			productRefGroup = 73989CDC2597AF8200BDA7A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73989CDA2597AF8200BDA7A0 /* Wolt */,
+				73989CEB2597AF8800BDA7A0 /* WoltTests */,
+				73989CF62597AF8800BDA7A0 /* WoltUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73989CD92597AF8200BDA7A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73989CE62597AF8700BDA7A0 /* Preview Assets.xcassets in Resources */,
+				73989CE32597AF8700BDA7A0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73989CEA2597AF8800BDA7A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73989CF52597AF8800BDA7A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73989CD72597AF8200BDA7A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73989CE12597AF8200BDA7A0 /* ContentView.swift in Sources */,
+				73989CDF2597AF8200BDA7A0 /* WoltApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73989CE82597AF8800BDA7A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73989CF12597AF8800BDA7A0 /* WoltTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73989CF32597AF8800BDA7A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73989CFC2597AF8800BDA7A0 /* WoltUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73989CEE2597AF8800BDA7A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73989CDA2597AF8200BDA7A0 /* Wolt */;
+			targetProxy = 73989CED2597AF8800BDA7A0 /* PBXContainerItemProxy */;
+		};
+		73989CF92597AF8800BDA7A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73989CDA2597AF8200BDA7A0 /* Wolt */;
+			targetProxy = 73989CF82597AF8800BDA7A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		73989CFE2597AF8800BDA7A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		73989CFF2597AF8800BDA7A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73989D012597AF8800BDA7A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Wolt/Preview Content\"";
+				DEVELOPMENT_TEAM = RQ88JH3YZ3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Wolt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TanyEm.Wolt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		73989D022597AF8800BDA7A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Wolt/Preview Content\"";
+				DEVELOPMENT_TEAM = RQ88JH3YZ3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Wolt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TanyEm.Wolt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		73989D042597AF8800BDA7A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RQ88JH3YZ3;
+				INFOPLIST_FILE = WoltTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TanyEm.WoltTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wolt.app/Wolt";
+			};
+			name = Debug;
+		};
+		73989D052597AF8800BDA7A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RQ88JH3YZ3;
+				INFOPLIST_FILE = WoltTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TanyEm.WoltTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wolt.app/Wolt";
+			};
+			name = Release;
+		};
+		73989D072597AF8800BDA7A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RQ88JH3YZ3;
+				INFOPLIST_FILE = WoltUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TanyEm.WoltUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wolt;
+			};
+			name = Debug;
+		};
+		73989D082597AF8800BDA7A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RQ88JH3YZ3;
+				INFOPLIST_FILE = WoltUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TanyEm.WoltUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wolt;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73989CD62597AF8100BDA7A0 /* Build configuration list for PBXProject "Wolt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73989CFE2597AF8800BDA7A0 /* Debug */,
+				73989CFF2597AF8800BDA7A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73989D002597AF8800BDA7A0 /* Build configuration list for PBXNativeTarget "Wolt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73989D012597AF8800BDA7A0 /* Debug */,
+				73989D022597AF8800BDA7A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73989D032597AF8800BDA7A0 /* Build configuration list for PBXNativeTarget "WoltTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73989D042597AF8800BDA7A0 /* Debug */,
+				73989D052597AF8800BDA7A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73989D062597AF8800BDA7A0 /* Build configuration list for PBXNativeTarget "WoltUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73989D072597AF8800BDA7A0 /* Debug */,
+				73989D082597AF8800BDA7A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73989CD32597AF8100BDA7A0 /* Project object */;
+}
