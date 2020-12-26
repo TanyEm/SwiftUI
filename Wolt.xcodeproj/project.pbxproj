@@ -13,6 +13,11 @@
 		73989CE62597AF8700BDA7A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73989CE52597AF8700BDA7A0 /* Preview Assets.xcassets */; };
 		73989CF12597AF8800BDA7A0 /* WoltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CF02597AF8800BDA7A0 /* WoltTests.swift */; };
 		73989CFC2597AF8800BDA7A0 /* WoltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CFB2597AF8800BDA7A0 /* WoltUITests.swift */; };
+		73989D0F2597B00100BDA7A0 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D0E2597B00100BDA7A0 /* Place.swift */; };
+		73989D142597B01A00BDA7A0 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D132597B01A00BDA7A0 /* Restaurant.swift */; };
+		73989D192597B03F00BDA7A0 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D182597B03F00BDA7A0 /* ImageView.swift */; };
+		73989D1E2597B06600BDA7A0 /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D1D2597B06600BDA7A0 /* RestaurantView.swift */; };
+		73989D232597B0BB00BDA7A0 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D222597B0BB00BDA7A0 /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		73989CF72597AF8800BDA7A0 /* WoltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73989CFB2597AF8800BDA7A0 /* WoltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoltUITests.swift; sourceTree = "<group>"; };
 		73989CFD2597AF8800BDA7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73989D0E2597B00100BDA7A0 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		73989D132597B01A00BDA7A0 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		73989D182597B03F00BDA7A0 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		73989D1D2597B06600BDA7A0 /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
+		73989D222597B0BB00BDA7A0 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +105,14 @@
 		73989CDD2597AF8200BDA7A0 /* Wolt */ = {
 			isa = PBXGroup;
 			children = (
+				73989D0D2597AFC600BDA7A0 /* Models */,
+				73989D0C2597AFBC00BDA7A0 /* Views */,
 				73989CDE2597AF8200BDA7A0 /* WoltApp.swift */,
 				73989CE02597AF8200BDA7A0 /* ContentView.swift */,
 				73989CE22597AF8700BDA7A0 /* Assets.xcassets */,
 				73989CE72597AF8700BDA7A0 /* Info.plist */,
 				73989CE42597AF8700BDA7A0 /* Preview Content */,
+				73989D222597B0BB00BDA7A0 /* MockData.swift */,
 			);
 			path = Wolt;
 			sourceTree = "<group>";
@@ -128,6 +141,24 @@
 				73989CFD2597AF8800BDA7A0 /* Info.plist */,
 			);
 			path = WoltUITests;
+			sourceTree = "<group>";
+		};
+		73989D0C2597AFBC00BDA7A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				73989D182597B03F00BDA7A0 /* ImageView.swift */,
+				73989D1D2597B06600BDA7A0 /* RestaurantView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		73989D0D2597AFC600BDA7A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				73989D0E2597B00100BDA7A0 /* Place.swift */,
+				73989D132597B01A00BDA7A0 /* Restaurant.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73989D192597B03F00BDA7A0 /* ImageView.swift in Sources */,
+				73989D142597B01A00BDA7A0 /* Restaurant.swift in Sources */,
+				73989D1E2597B06600BDA7A0 /* RestaurantView.swift in Sources */,
+				73989D232597B0BB00BDA7A0 /* MockData.swift in Sources */,
+				73989D0F2597B00100BDA7A0 /* Place.swift in Sources */,
 				73989CE12597AF8200BDA7A0 /* ContentView.swift in Sources */,
 				73989CDF2597AF8200BDA7A0 /* WoltApp.swift in Sources */,
 			);
