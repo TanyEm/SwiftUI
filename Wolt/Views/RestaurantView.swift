@@ -5,7 +5,7 @@ struct RestaurantView: View {
     let places: Place
     
     var body: some View {
-        /// main vertical stack view - contains upper stackview and image
+        // main vertical stack view - contains upper stackview and image
         VStack(alignment: .leading, spacing: 10) {
             
             // Upper Stackview - Contains Horizontal stack and post content

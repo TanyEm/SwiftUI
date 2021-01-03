@@ -18,6 +18,11 @@
 		73989D192597B03F00BDA7A0 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D182597B03F00BDA7A0 /* ImageView.swift */; };
 		73989D1E2597B06600BDA7A0 /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D1D2597B06600BDA7A0 /* RestaurantView.swift */; };
 		73989D232597B0BB00BDA7A0 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D222597B0BB00BDA7A0 /* MockData.swift */; };
+		73989D2F25A130CD00BDA7A0 /* RestaurantCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D2E25A130CD00BDA7A0 /* RestaurantCellViewModel.swift */; };
+		73989D3725A1316900BDA7A0 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D3625A1316900BDA7A0 /* Places.swift */; };
+		73989D3C25A1340600BDA7A0 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D3B25A1340600BDA7A0 /* RestaurantCell.swift */; };
+		73989D4125A1351900BDA7A0 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D4025A1351900BDA7A0 /* ListView.swift */; };
+		73989D4625A13BEE00BDA7A0 /* RestaurantsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D4525A13BEE00BDA7A0 /* RestaurantsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		73989D182597B03F00BDA7A0 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		73989D1D2597B06600BDA7A0 /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
 		73989D222597B0BB00BDA7A0 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		73989D2E25A130CD00BDA7A0 /* RestaurantCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCellViewModel.swift; sourceTree = "<group>"; };
+		73989D3625A1316900BDA7A0 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		73989D3B25A1340600BDA7A0 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		73989D4025A1351900BDA7A0 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		73989D4525A13BEE00BDA7A0 /* RestaurantsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,8 @@
 		73989CDD2597AF8200BDA7A0 /* Wolt */ = {
 			isa = PBXGroup;
 			children = (
+				73989D4A25A13BF800BDA7A0 /* Services */,
+				73989D2D25A1308D00BDA7A0 /* ViewModels */,
 				73989D0D2597AFC600BDA7A0 /* Models */,
 				73989D0C2597AFBC00BDA7A0 /* Views */,
 				73989CDE2597AF8200BDA7A0 /* WoltApp.swift */,
@@ -148,6 +160,8 @@
 			children = (
 				73989D182597B03F00BDA7A0 /* ImageView.swift */,
 				73989D1D2597B06600BDA7A0 /* RestaurantView.swift */,
+				73989D3B25A1340600BDA7A0 /* RestaurantCell.swift */,
+				73989D4025A1351900BDA7A0 /* ListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,8 +171,25 @@
 			children = (
 				73989D0E2597B00100BDA7A0 /* Place.swift */,
 				73989D132597B01A00BDA7A0 /* Restaurant.swift */,
+				73989D3625A1316900BDA7A0 /* Places.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		73989D2D25A1308D00BDA7A0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				73989D2E25A130CD00BDA7A0 /* RestaurantCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		73989D4A25A13BF800BDA7A0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				73989D4525A13BEE00BDA7A0 /* RestaurantsService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,13 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73989D4625A13BEE00BDA7A0 /* RestaurantsService.swift in Sources */,
+				73989D3C25A1340600BDA7A0 /* RestaurantCell.swift in Sources */,
 				73989D192597B03F00BDA7A0 /* ImageView.swift in Sources */,
 				73989D142597B01A00BDA7A0 /* Restaurant.swift in Sources */,
 				73989D1E2597B06600BDA7A0 /* RestaurantView.swift in Sources */,
 				73989D232597B0BB00BDA7A0 /* MockData.swift in Sources */,
 				73989D0F2597B00100BDA7A0 /* Place.swift in Sources */,
+				73989D2F25A130CD00BDA7A0 /* RestaurantCellViewModel.swift in Sources */,
 				73989CE12597AF8200BDA7A0 /* ContentView.swift in Sources */,
+				73989D4125A1351900BDA7A0 /* ListView.swift in Sources */,
 				73989CDF2597AF8200BDA7A0 /* WoltApp.swift in Sources */,
+				73989D3725A1316900BDA7A0 /* Places.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
