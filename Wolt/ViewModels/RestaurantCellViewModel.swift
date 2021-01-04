@@ -8,6 +8,13 @@ public class RestaurantCellViewModel: ObservableObject {
     
     var restaurantsToShow = [Restaurant]()
     
+    @Published var rest = [
+        Restaurant(id: "1", title: "Rest1", description: "Desc1", isLiked: true, img: "1"),
+        Restaurant(id: "2", title: "Rest2", description: "Desc2", isLiked: false, img: "2"),
+        Restaurant(id: "3", title: "Rest3", description: "Desc3", isLiked: false, img: "3"),
+        Restaurant(id: "4", title: "Rest4", description: "Desc4", isLiked: true, img: "4")
+    ]
+    
     init() {
         self.restService = RestaurantsService()
         self.likeService = LikeStatusManager()

@@ -10,6 +10,7 @@
 		7366B11B25A1EF7B00EC4EAF /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366B11A25A1EF7B00EC4EAF /* RequestModel.swift */; };
 		7366B12725A2393700EC4EAF /* LikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366B12625A2393700EC4EAF /* LikeModel.swift */; };
 		7366B12F25A248C100EC4EAF /* LikeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366B12E25A248C100EC4EAF /* LikeManager.swift */; };
+		738A211125A346D800A18DEC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A211025A346D800A18DEC /* LocationManager.swift */; };
 		73989CDF2597AF8200BDA7A0 /* WoltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CDE2597AF8200BDA7A0 /* WoltApp.swift */; };
 		73989CE12597AF8200BDA7A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CE02597AF8200BDA7A0 /* ContentView.swift */; };
 		73989CE32597AF8700BDA7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73989CE22597AF8700BDA7A0 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		7366B11A25A1EF7B00EC4EAF /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		7366B12625A2393700EC4EAF /* LikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeModel.swift; sourceTree = "<group>"; };
 		7366B12E25A248C100EC4EAF /* LikeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeManager.swift; sourceTree = "<group>"; };
+		738A211025A346D800A18DEC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		73989CDB2597AF8200BDA7A0 /* Wolt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wolt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73989CDE2597AF8200BDA7A0 /* WoltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoltApp.swift; sourceTree = "<group>"; };
 		73989CE02597AF8200BDA7A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			children = (
 				73989D4525A13BEE00BDA7A0 /* RestaurantsService.swift */,
 				7366B12E25A248C100EC4EAF /* LikeManager.swift */,
+				738A211025A346D800A18DEC /* LocationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				73B82FF925A266E900525F16 /* ImageLoader.swift in Sources */,
 				73989D4625A13BEE00BDA7A0 /* RestaurantsService.swift in Sources */,
 				73989D3C25A1340600BDA7A0 /* RestaurantCell.swift in Sources */,
+				738A211125A346D800A18DEC /* LocationManager.swift in Sources */,
 				7366B12725A2393700EC4EAF /* LikeModel.swift in Sources */,
 				7366B12F25A248C100EC4EAF /* LikeManager.swift in Sources */,
 				73989D1E2597B06600BDA7A0 /* RestaurantView.swift in Sources */,

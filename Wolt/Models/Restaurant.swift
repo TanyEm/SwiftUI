@@ -7,19 +7,11 @@
 
 import SwiftUI
 
-struct Restaurant: Identifiable {
+struct Restaurant: Identifiable, Codable {
     var id: String
     var title: String
     var description: String
     var isLiked: Bool
     var img: String
-    
-    init(id: String, title: String, description: String, isLiked: Bool, img: String) {
-        self.id = id
-        self.title = title
-        self.description = description
-        self.isLiked = isLiked
-        self.img = img
-    }
 
 }
