@@ -2,22 +2,32 @@ import Foundation
 import CoreLocation
 
 public class RestaurantCellViewModel {
+    
+    private let service: RestaurantsService
+    
 
-    private var place: Places
-
-    public init(place: Places) {
-        self.place = place
+    init(service: RestaurantsService) {
+        self.service = service
     }
 
-    public func isCompleted() -> Bool {
-        return self.place.isLiked
+//    func isCompleted() -> Bool {
+//        return self.place.isLiked
+//    }
+    
+    func getRestaurants(_ manager: CLLocationManager, _ result: @escaping ([RestaurantResponseData]) -> ()) {
+        self.service.getRestaurantList(manager) { (list) in
+            result(list)
+        }
     }
 
-    public func getTitle() -> String {
-        return self.place.title
-    }
-
-    public func getId() -> String {
-        return self.place.id
-    }
+//
+//    func getTitle() -> String {
+//        self.service.getList(manager) { (list) in
+//            result(stationList)
+//        }
+//    }
+//
+//    func getId() -> String {
+//        return self.place.id
+//    }
 }

@@ -3,39 +3,31 @@ import CoreLocation
 
 class RestaurantsService {
     
-    func getStationList (_ manager: CLLocationManager, _ listed: @escaping ([Places]) -> ()) {
+    var lat: Double?
+    var lon: Double?
+    
+    var userLocation = CLLocationCoordinate2D()
+    
+    func getRestaurantList(_ manager: CLLocationManager, _ listed: @escaping ([RestaurantResponseData]) -> ()) {
+        let request = RestaurantListRequest()
         
-        var lat: Float?
-        var lon: Float?
-        var userLocation = CLLocationCoordinate2D()
+        if manager.location?.coordinate == nil {
+            lat = 50.1
+            lon = 14.6
+        } else {
+            userLocation = manager.location!.coordinate
+            lat = userLocation.latitude
+            lon = userLocation.longitude
+        }
         
-        var components = URLComponents()
-            components.scheme = "https"
-            components.host = "restaurant-api.wolt.fi"
-            components.path = "/v3/venues"
-            components.queryItems = [
-                URLQueryItem(name: "lat", value: "\(lat)"),
-                URLQueryItem(name: "lon", value: "\(lon)")
-            ]
-
-        guard let restaurantDataURL = components.url else { return }
-        
-        var request = URLRequest(url: restaurantDataURL)
-        request.httpMethod = "GET"
-        
-        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
-            if error != nil {
-                print("error=\(String(describing:error))")
-                return
+        request.getStationList(lat: lat!, lon: lon!) { (result) in
+            if result.count != nil {
+                result.
+                
+            } else {
+                print("Error: failed to get restaurant list")
             }
-
-            do {
-                let response = try JSONDecoder().decode(Places.self, from: data!)
-                    callback(response.results as! [Places])
-                } catch {
-                    print(error)
-                }
-            }
-        task.resume()
+        }
+        
     }
 }

@@ -1,17 +1,17 @@
 import SwiftUI
 
 struct RestaurantsListView: View {
-    let places = MockData.places()
-        
-        /// view body
+    let places = [RestaurantResponseData]()
+
+        // view body
         var body: some View {
-            
+
             // Provides NavigationController
             NavigationView {
-            
+
                     // List inside the navigationController
                     List {
-                
+
                         // loop through all the posts and create a post view for each item
                         ForEach(places) { place in
                             RestaurantView(places: place)

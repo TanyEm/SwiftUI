@@ -1,17 +1,27 @@
 import SwiftUI
 
 struct RestaurantCell: View {
-    var restCellViewModel: RestaurantCellViewModel
-    var updateTodo: ((_ id: Int) -> Void)
-
+    var restaurant: Restaurants 
+    
     var body: some View {
         HStack {
-            Image(systemName: (self.restCellViewModel.isCompleted() ? "checkmark.square" : "like")).tapAction {
-                self.updateTodo(self.restCellViewModel.getId())
+            ImageView(image: restaurant.img, size: 70)
+            
+            VStack(alignment: .leading) {
+                Text(restaurant.title).font(.headline)
+                Text(restaurant.description).font(.subheadline).foregroundColor(.gray)
+                Spacer().frame(height: 15)
             }
-
-            Text(self.restCellViewModel.getTitle())
+            if restaurant.isLiked {
+                ImageView(image: "like", size: 70)
+            }
+            
         }
-        .padding()
+    }
+}
+
+struct RestaurantCell_Previews: PreviewProvider {
+    static var previews: some View {
+        RestaurantCell(restaurant: Restaurants(id:"7", title: "Creativity, Inc.", description: "Ed Catmull", isLiked: true, img: "like"))
     }
 }
