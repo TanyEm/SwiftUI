@@ -14,7 +14,7 @@ enum DataError: Error {
 protocol LikeManager {
     func createLike(likeRest: LikeModel)
     func getLikeStatus(id: String) throws -> LikeModel
-    func removeTask(id: String) throws
+    func removeLike(id: String) throws
 }
 
 class LikeStatusManager: LikeManager {
@@ -22,7 +22,7 @@ class LikeStatusManager: LikeManager {
     var items = [LikeModel]()
     
     init() {
-        loadLiks()
+        loadLikes()
         print("Documents folder is \(documentsDirectory())")
         print("Data file path is \(dataFilePath())")
     }
@@ -38,7 +38,7 @@ class LikeStatusManager: LikeManager {
         return paths[0]
     }
     
-    private func loadLiks() {
+    private func loadLikes() {
         let path = dataFilePath()
         if let data = try? Data(contentsOf: path) {
             let decoder = PropertyListDecoder()
@@ -60,7 +60,7 @@ class LikeStatusManager: LikeManager {
         }
     }
         
-    //MARK: Liks management
+    //MARK: Likes management
     
     func createLike(likeRest: LikeModel) {
         items.append(likeRest)
@@ -76,7 +76,7 @@ class LikeStatusManager: LikeManager {
         throw DataError.likeNotFound(id: id)
     }
         
-    func removeTask(id: String) throws {
+    func removeLike(id: String) throws {
         var idxToRemove = -1
         for (idx, el) in items.enumerated() {
             if el.id == id {

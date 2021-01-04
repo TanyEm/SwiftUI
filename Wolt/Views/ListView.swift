@@ -1,14 +1,26 @@
 import SwiftUI
 
-struct TodoList: View {
-    var restaurants: RestaurantResponseData
-    var updateRestaurant: ((_ id: Int) -> Void)
+struct ListView: View {
 
     var body: some View {
-        List(self.restaurants) { restaurant in
-            RestaurantCell(restCellViewModel: RestaurantCellViewModel(restaurant: restaurants), updateTodo: { (id) in
-                self.updateRestaurant(id)
-            })
+        
+        List(0 ..< 15) { item in
+            Image(systemName: "photo")
+            VStack(alignment: .leading) {
+                Text("Restaurant")
+                Text("Turning a catastrophe into something delicious!")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+            }
+            Spacer()
+            ImageView(image: "like", size: 20)
+                .padding(.leading)
         }
+    }
+}
+
+struct List_Previews: PreviewProvider {
+    static var previews: some View {
+        ListView()
     }
 }

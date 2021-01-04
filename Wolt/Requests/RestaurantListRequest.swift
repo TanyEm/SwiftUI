@@ -9,7 +9,7 @@ import Foundation
 
 struct RestaurantListRequest {
     
-    func getStationList(lat: Double, lon: Double, callback: @escaping (_ result: [RestaurantResponseData])->()) {
+    func getRestaurantsList(lat: Double, lon: Double, callback: @escaping (_ result: [RestaurantResponseData])->()) {
         
         var components = URLComponents()
             components.scheme = "https"

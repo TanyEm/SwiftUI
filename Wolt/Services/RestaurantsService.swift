@@ -3,6 +3,7 @@ import CoreLocation
 
 class RestaurantsService {
     
+    var list = [RestaurantResponseData]()
     var lat: Double?
     var lon: Double?
     
@@ -20,12 +21,13 @@ class RestaurantsService {
             lon = userLocation.longitude
         }
         
-        request.getStationList(lat: lat!, lon: lon!) { (result) in
-            if result.count != nil {
-                result.
-                
-            } else {
-                print("Error: failed to get restaurant list")
+        request.getRestaurantsList(lat: lat!, lon: lon!) { (result) in
+            DispatchQueue.main.async {
+                if result.count != nil {
+                    self.list = result
+                } else {
+                    print("Error: failed to get restaurant list")
+                }
             }
         }
         
