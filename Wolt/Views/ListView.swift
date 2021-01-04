@@ -1,20 +1,34 @@
 import SwiftUI
 
 struct ListView: View {
+    
+    @ObservedObject var restaurant = RestaurantCellViewModel()
 
     var body: some View {
-        
-        List(0 ..< 15) { item in
-            Image(systemName: "photo")
-            VStack(alignment: .leading) {
-                Text("Restaurant")
-                Text("Turning a catastrophe into something delicious!")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
+        NavigationView {
+            List{
+                ForEach(restaurant.restaurantsToShow) { rest in
+                    Image(systemName: "photo")
+                    VStack(alignment: .leading) {
+                        Text(rest.title)
+                        Text(rest.description)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
+                    
+                    if rest.isLiked {
+                        ImageView(image: "like", size: 20)
+                    } else {
+                        ImageView(image: "without_like", size: 20)
+                        
+                    }
+                    
+                    ImageView(image: "like", size: 20)
+                        .padding(.leading)
+                }
             }
-            Spacer()
-            ImageView(image: "like", size: 20)
-                .padding(.leading)
+            .navigationBarTitle("Restaurants")
         }
     }
 }

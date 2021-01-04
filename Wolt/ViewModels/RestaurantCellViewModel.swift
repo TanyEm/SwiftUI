@@ -1,7 +1,7 @@
 import Foundation
 import CoreLocation
 
-public class RestaurantCellViewModel {
+public class RestaurantCellViewModel: ObservableObject {
     
     private let restService: RestaurantsService
     private let likeService: LikeStatusManager
