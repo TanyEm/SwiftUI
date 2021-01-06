@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct RestaurantImage: View {
-    let image: Image
+    let image: String
     
     var body: some View {
-        image
+        Image(image)
         .resizable()
         .frame(width: 70, height: 70)
         .aspectRatio(contentMode: .fit)

@@ -20,7 +20,7 @@ class LocationManager: NSObject, ObservableObject {
 
     let objectWillChange = PassthroughSubject<Void, Never>()
 
-    private let locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
 }
 
 extension LocationManager: CLLocationManagerDelegate {

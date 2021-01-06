@@ -1,48 +1,58 @@
 import SwiftUI
+import Combine
 
 struct ListView: View {
     
-    @ObservedObject var restaurant = RestaurantCellViewModel()
+    @ObservedObject var viewModel = RestaurantCellViewModel()
     
-    @ObservedObject var locationManager = LocationManager()
-
-    var userLatitude: String {
-        return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
-    }
-
-    var userLongitude: String {
-        return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
-    }
-
-//    var body: some View {
-//            VStack {
-//                HStack {
-//                    Text("latitude: \(userLatitude)")
-//                    Text("longitude: \(userLongitude)")
-//                }
-//            }
-//        }
-
+    @State private var didTap: Bool = false
+    
     var body: some View {
-//        NavigationView {
-//            List{
-//                ForEach(restaurant.rest) { index in
-//                    RestaurantCell(restaurant: self.$restaurant.rest[index])
-//                }
-//            }
-//            .navigationBarTitle("Restaurants")
-//        }
-        ForEach(restaurant, id: \.self) { rest in
-          HStack {
-            Text(rest.name)
-            Spacer()
-            if rest.isChecked {
-              Text("✅")
-            } else {
-              Text("🔲") }
+        NavigationView{
+            HStack {
+                List(viewModel.restaurantsToShow) { rest in
+                
+//                    AsyncImage(
+//                        url: URL(rest.img),
+//                       placeholder: { Text("Loading ...") },
+//                       image: { Image(uiImage: $0).resizable() }
+//                    )
+//                   .frame(idealHeight: UIScreen.main.bounds.width / 2 * 3) // 2:3 aspect ratio
+                    ImageView(image: "3",size: 70)
+                    
+                    VStack (alignment: .leading) {
+                        Text(rest.title)
+                            .font(.headline)
+                        Text(rest.description)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
+                    
+                    ImageView(image: rest.isLiked  ? "like" : "without_like", size: 20)
+                        //                        .onTapGesture {
+                        //                            if rest.isLiked {
+                        //                                viewModel.removeLike(id: rest.id)
+                        //                            } else {
+                        //                                let rest = LikeModel(id: rest.id, isLked: !rest.isLiked)
+                        //                                viewModel.appendLike(likeRest: rest)
+                        //                            }
+                        //
+                        //                        }
+                        .gesture(TapGesture()
+                                    .onEnded {
+                                        self.didTap.toggle()
+                                        
+                                    }
+                        )
+                        // 4.
+                        
+                }
+                .navigationBarTitle("Restaurants")
             }
         }
     }
+
 }
 
 struct List_Previews: PreviewProvider {

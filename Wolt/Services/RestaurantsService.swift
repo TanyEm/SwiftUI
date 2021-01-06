@@ -1,3 +1,10 @@
+//
+//  RestaurantsService.swift
+//  Wolt-Kit
+//
+//  Created by Tatiana Podlesnykh on 4.1.2021.
+//
+
 import Foundation
 import CoreLocation
 
@@ -25,6 +32,7 @@ class RestaurantsService {
             DispatchQueue.main.async {
                 if result.count != nil {
                     self.list = result
+                    listed(result)
                 } else {
                     print("Error: failed to get restaurant list")
                 }

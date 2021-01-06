@@ -8,8 +8,10 @@ struct ImageView: View {
     var body: some View {
         Image(image)
             .resizable()    // resizable image
-            .frame(width: size, height: size) // frame
-            .clipShape(Circle())    // make rounded
-            .overlay(Circle().stroke(Color.white.opacity(0.5), lineWidth: 5)) // create rounded border
+            .aspectRatio(contentMode: .fill)
+            .frame(width: size, height: size, alignment: .center) // frame
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .shadow(color: .gray, radius: 5, x: 2, y: 2)
+            .padding(4)
     }
 }

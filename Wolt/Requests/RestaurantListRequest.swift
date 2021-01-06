@@ -21,7 +21,7 @@ struct RestaurantListRequest {
             ]
 
         guard let restaurantDataURL = components.url else { return }
-        
+                
         var request = URLRequest(url: restaurantDataURL)
         request.httpMethod = "GET"
         
@@ -32,10 +32,10 @@ struct RestaurantListRequest {
             }
 
             do {
-                let response = try JSONDecoder().decode(RestaurantRequestModel.self, from: data!)
-                    callback(response.results as! [RestaurantResponseData])
+                let resp = try JSONDecoder().decode(RestaurantRequestModel.self, from: data!)
+                callback(resp.results)
                 } catch {
-                    print(error)
+                    print("Error while decoding the response", error)
                 }
             }
         task.resume()

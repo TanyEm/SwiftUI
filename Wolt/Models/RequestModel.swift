@@ -1,10 +1,3 @@
-//
-//  RequestModel.swift
-//  Wolt
-//
-//  Created by Tatiana Podlesnykh on 3.1.2021.
-//
-
 import Foundation
 
 struct IDData: Codable {
@@ -31,7 +24,7 @@ struct RestaurantResponseData: Codable {
     var description: [DescriptionData]
     var id: IDData
     var listImage: String
-    var location:[CoordinatesData]
+    var location: CoordinatesData
     var name:[NameData]
     
     enum CodingKeys: String, CodingKey {

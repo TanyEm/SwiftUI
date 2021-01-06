@@ -13,5 +13,4 @@ struct Restaurant: Identifiable, Codable {
     var description: String
     var isLiked: Bool
     var img: String
-
 }
