@@ -11,7 +11,9 @@ import SwiftUI
 struct WoltApp: App {
     var body: some Scene {
         WindowGroup {
-            ListView()
+//            ListView()
+            ViewList()
+//            V()
         }
     }
 }

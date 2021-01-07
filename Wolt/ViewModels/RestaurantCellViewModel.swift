@@ -7,6 +7,8 @@ public class RestaurantCellViewModel: ObservableObject {
     private let restService: RestaurantsService
     private let likeService: LikeStatusManager
     private let location: LocationManager
+    
+    let manager = CLLocationManager()
         
     @Published var restaurantsToShow = [Restaurant]()
         
