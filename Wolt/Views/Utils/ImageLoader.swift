@@ -1,46 +1,13 @@
-import SwiftUI
 //
-//let posters = [
-//    "https://image.tmdb.org/t/p/original//pThyQovXQrw2m0s9x82twj48Jq4.jpg",
-//    "https://image.tmdb.org/t/p/original//vqzNJRH4YyquRiWxCCOH0aXggHI.jpg",
-//    "https://image.tmdb.org/t/p/original//6ApDtO7xaWAfPqfi2IARXIzj8QS.jpg",
-//    "https://image.tmdb.org/t/p/original//7GsM4mtM0worCtIVeiQt28HieeN.jpg"
-//].map { URL(string: $0)! }
+//  EnvironmentValues+ImageCache.swift
+//  Wolt
 //
-//struct ContentView: View {
-//    var body: some View {
-//         List(posters, id: \.self) { url in
-//             AsyncImage(
-//                url: url,
-//                placeholder: { Text("Loading ...") },
-//                image: { Image(uiImage: $0).resizable() }
-//             )
-//            .frame(idealHeight: UIScreen.main.bounds.width / 2 * 3) // 2:3 aspect ratio
-//         }
-//    }
-//    
-////    var body: some View {
-////        VStack {
-////            HStack {
-////                AsyncImage(
-////                    url: URL("https://image.tmdb.org/t/p/original//pThyQovXQrw2m0s9x82twj48Jq4.jpg"),
-////                    placeholder: { Text("Loading ...") },
-////                    image: { Image(uiImage: $0).resizable() }
-////                )
-////                .frame(idealHeight: UIScreen.main.bounds.width / 2 * 3) // 2:3 aspect ratio
-////            }
-////        }
-////    }
-//}
+//  Created by Tatiana Podlesnykh on 6.1.2021.
 //
-//
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
 
-struct V: View {
+import SwiftUI
+
+struct ImageLoader: View {
     private enum LoadState {
         case loading, success, failure
     }
@@ -72,12 +39,13 @@ struct V: View {
     @StateObject private var loader: Loader
     var loading: Image
     var failure: Image
+    var size: CGFloat = 70.0
 
     var body: some View {
         selectImage()
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: 70, height: 70, alignment: .center) // frame
+            .frame(width: size, height: size, alignment: .center) // frame
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 5, x: 2, y: 2)
             .padding(4)
