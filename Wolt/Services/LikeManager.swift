@@ -23,8 +23,8 @@ class LikeStatusManager: LikeManager {
     
     init() {
         loadLikes()
-        print("Documents folder is \(documentsDirectory())")
-        print("Data file path is \(dataFilePath())")
+//        print("Documents folder is \(documentsDirectory())")
+//        print("Data file path is \(dataFilePath())")
     }
     
     //MARK: Data management

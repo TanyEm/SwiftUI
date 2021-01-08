@@ -33,7 +33,6 @@ struct RestaurantListRequest {
 
             do {
                 let resp = try JSONDecoder().decode(RestaurantRequestModel.self, from: data!)
-                print("resp.results", resp.results.count)
                 callback(resp.results)
                 } catch {
                     print("Error while decoding the response", error)

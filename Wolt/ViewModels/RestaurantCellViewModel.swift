@@ -34,7 +34,7 @@ public class RestaurantCellViewModel: ObservableObject {
                     let likeStatus = try self.likeService.getLikeStatus(id: restaurant.id.oid)
                     isLiked = likeStatus.isLked
                 } catch {
-                    print(error.localizedDescription)
+                    //The restaurant without like
                 }
 
                 let restaurantToShow = Restaurant(
