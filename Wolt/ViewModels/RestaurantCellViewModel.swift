@@ -11,24 +11,21 @@ public class RestaurantCellViewModel: ObservableObject {
     let manager = CLLocationManager()
         
     @Published var restaurantsToShow = [Restaurant]()
-        
-//    @Published var rest: [Restaurant?] = Array(repeating: nil, count: 15)
-    
+            
     init() {
         self.restService = RestaurantsService()
         self.likeService = LikeStatusManager()
         self.location = LocationManager()
         
-        getRestaurantsWithLikes(location.locationManager) { [self] (list) in
-            restaurantsToShow = list
-        }
+        fetchdata()
     }
     
     func appendLike(likeRest: LikeModel) {
         likeService.appendLike(likeRest: likeRest)
     }
 
-    func getRestaurantsWithLikes(_ manager: CLLocationManager, _ result: @escaping ([Restaurant]) -> ()) {
+    private func getRestaurantsWithLikes(_ manager: CLLocationManager, _ result: @escaping ([Restaurant]) -> ()) {
+                
         restService.getRestaurantList(manager) { (restaurantsList) in
             for restaurant in restaurantsList {
                 var isLiked = false
@@ -48,9 +45,10 @@ public class RestaurantCellViewModel: ObservableObject {
                     img: (!restaurant.listImage.isEmpty) ? restaurant.listImage : ""
                 )
                 
-                self.restaurantsToShow.append(restaurantToShow)
+                if self.restaurantsToShow.count < 15 {
+                    self.restaurantsToShow.append(restaurantToShow)
+                }
             }
-            
             result(self.restaurantsToShow)
         }
     }
@@ -62,4 +60,11 @@ public class RestaurantCellViewModel: ObservableObject {
             print("Unexpected error: \(error.localizedDescription).")
         }
     }
+    
+    func fetchdata() {
+        getRestaurantsWithLikes(location.locationManager) { [self] (list) in
+            restaurantsToShow = list
+        }
+    }
+
 }

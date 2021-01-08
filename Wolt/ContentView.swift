@@ -1,106 +1,86 @@
 import SwiftUI
-//
-//let posters = [
-//    "https://image.tmdb.org/t/p/original//pThyQovXQrw2m0s9x82twj48Jq4.jpg",
-//    "https://image.tmdb.org/t/p/original//vqzNJRH4YyquRiWxCCOH0aXggHI.jpg",
-//    "https://image.tmdb.org/t/p/original//6ApDtO7xaWAfPqfi2IARXIzj8QS.jpg",
-//    "https://image.tmdb.org/t/p/original//7GsM4mtM0worCtIVeiQt28HieeN.jpg"
-//].map { URL(string: $0)! }
-//
-//struct ContentView: View {
-//    var body: some View {
-//         List(posters, id: \.self) { url in
-//             AsyncImage(
-//                url: url,
-//                placeholder: { Text("Loading ...") },
-//                image: { Image(uiImage: $0).resizable() }
-//             )
-//            .frame(idealHeight: UIScreen.main.bounds.width / 2 * 3) // 2:3 aspect ratio
-//         }
-//    }
-//    
-////    var body: some View {
-////        VStack {
-////            HStack {
-////                AsyncImage(
-////                    url: URL("https://image.tmdb.org/t/p/original//pThyQovXQrw2m0s9x82twj48Jq4.jpg"),
-////                    placeholder: { Text("Loading ...") },
-////                    image: { Image(uiImage: $0).resizable() }
-////                )
-////                .frame(idealHeight: UIScreen.main.bounds.width / 2 * 3) // 2:3 aspect ratio
-////            }
-////        }
-////    }
-//}
-//
-//
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
+import Combine
 
-struct V: View {
-    private enum LoadState {
-        case loading, success, failure
-    }
-
-    private class Loader: ObservableObject {
-        var data = Data()
-        var state = LoadState.loading
-
-        init(url: String) {
-            guard let parsedURL = URL(string: url) else {
-                fatalError("Invalid URL: \(url)")
-            }
-
-            URLSession.shared.dataTask(with: parsedURL) { data, response, error in
-                if let data = data, data.count > 0 {
-                    self.data = data
-                    self.state = .success
-                } else {
-                    self.state = .failure
-                }
-
-                DispatchQueue.main.async {
-                    self.objectWillChange.send()
-                }
-            }.resume()
-        }
-    }
+struct ViewList: View {
     
-    @StateObject private var loader: Loader
-    var loading: Image
-    var failure: Image
-
+    @ObservedObject var viewModel = RestaurantCellViewModel()
+    
     var body: some View {
-        selectImage()
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 70, height: 70, alignment: .center) // frame
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .shadow(color: .gray, radius: 5, x: 2, y: 2)
-            .padding(4)
-    }
-    
-    init(url: String, loading: Image = Image(systemName: "photo"), failure: Image = Image(systemName: "multiply.circle")) {
-            _loader = StateObject(wrappedValue: Loader(url: url))
-            self.loading = loading
-            self.failure = failure
-        }
-
-        private func selectImage() -> Image {
-            switch loader.state {
-            case .loading:
-                return loading
-            case .failure:
-                return failure
-            default:
-                if let image = UIImage(data: loader.data) {
-                    return Image(uiImage: image)
-                } else {
-                    return failure
+        NavigationView{
+            List {
+                ForEach(viewModel.restaurantsToShow, id: \.id){ rest in
+                    Cell(isPressed: rest.isLiked, rest: rest)
                 }
-            }
+            }.navigationTitle("Restaurant")
         }
+    }
+}
+
+struct Cell: View {
+    
+    @ObservedObject var viewModel = RestaurantCellViewModel()
+            
+    @State var isPressed: Bool
+    
+    @State var rest: Restaurant
+    
+//    @State private var img = ImageEnum.img1
+//    @State private var fadeOut = false
+
+    
+    var body: some View {
+        HStack{
+            ImageLoader(url: rest.img)
+            VStack (alignment: .leading) {
+                Text(rest.title)
+                    .font(.headline)
+                Text(rest.description)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+            }
+            Spacer()
+            
+            // change a photo, change rest.id only once while the last click,
+            // also, a photo changed once, on the second click nothing happened with the photo
+            Button(action: {
+                self.isPressed = rest.isLiked
+                self.isPressed.toggle()
+
+                if rest.isLiked {
+                    viewModel.removeLike(id: rest.id)
+                } else {
+                    let restLike = LikeModel(id: rest.id, isLked: !rest.isLiked)
+                    viewModel.appendLike(likeRest: restLike)
+                }
+            }) {
+                Image(self.isPressed ? "like" : "without_like")
+                      .resizable()
+                      .frame(width: 20, height: 20)
+            }
+            
+            // beautiful click, but doesn't change a photo, change rest.id only once while the last click
+//            Image(rest.isLiked  ? "like" : "without_like")
+//                .resizable()
+//                .frame(width: 20, height: 20)
+//                .opacity(fadeOut ? 0 : 1)
+//                .animation(.easeInOut(duration: 0.35))    // animatable fade in/out
+//                .onTapGesture {
+//                    self.fadeOut.toggle()                 // 1) fade out
+//
+//                    // delayed appear
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+//                        withAnimation {
+//                            self.img = self.img.next()    // 2) change image
+//                            self.fadeOut.toggle()         // 3) fade in
+//                            if rest.isLiked {
+//                                viewModel.removeLike(id: rest.id)
+//                            } else {
+//                                let restLike = LikeModel(id: rest.id, isLked: !rest.isLiked)
+//                                viewModel.appendLike(likeRest: restLike)
+//                            }
+//                        }
+//                    }
+//                }
+        }
+    }
 }
