@@ -82,6 +82,10 @@ class LikeStatusManager: LikeManager {
         saveLikeStatus()
     }
     
+    func getLikes() -> [LikeModel] {
+        return items
+    }
+    
     func getLikeStatus(id: String) throws -> LikeModel {
         for item in items {
             if item.id == id {

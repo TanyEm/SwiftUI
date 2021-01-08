@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		732F3CA225A5FDFE003F4073 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732F3CA125A5FDFE003F4073 /* ImageLoader.swift */; };
+		7350E1A025A8209600A08260 /* WoltRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350E19F25A8209600A08260 /* WoltRequestTests.swift */; };
 		7366B11B25A1EF7B00EC4EAF /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366B11A25A1EF7B00EC4EAF /* RequestModel.swift */; };
 		7366B12725A2393700EC4EAF /* LikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366B12625A2393700EC4EAF /* LikeModel.swift */; };
 		7366B12F25A248C100EC4EAF /* LikeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366B12E25A248C100EC4EAF /* LikeManager.swift */; };
@@ -16,7 +17,7 @@
 		73989CE12597AF8200BDA7A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CE02597AF8200BDA7A0 /* ContentView.swift */; };
 		73989CE32597AF8700BDA7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73989CE22597AF8700BDA7A0 /* Assets.xcassets */; };
 		73989CE62597AF8700BDA7A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73989CE52597AF8700BDA7A0 /* Preview Assets.xcassets */; };
-		73989CF12597AF8800BDA7A0 /* WoltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CF02597AF8800BDA7A0 /* WoltTests.swift */; };
+		73989CF12597AF8800BDA7A0 /* WoltLikeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CF02597AF8800BDA7A0 /* WoltLikeManagerTests.swift */; };
 		73989CFC2597AF8800BDA7A0 /* WoltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989CFB2597AF8800BDA7A0 /* WoltUITests.swift */; };
 		73989D2F25A130CD00BDA7A0 /* RestaurantCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D2E25A130CD00BDA7A0 /* RestaurantCellViewModel.swift */; };
 		73989D3725A1316900BDA7A0 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989D3625A1316900BDA7A0 /* Restaurant.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		732F3CA125A5FDFE003F4073 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		7350E19F25A8209600A08260 /* WoltRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoltRequestTests.swift; sourceTree = "<group>"; };
 		7366B11A25A1EF7B00EC4EAF /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		7366B12625A2393700EC4EAF /* LikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeModel.swift; sourceTree = "<group>"; };
 		7366B12E25A248C100EC4EAF /* LikeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeManager.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		73989CE52597AF8700BDA7A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		73989CE72597AF8700BDA7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73989CEC2597AF8800BDA7A0 /* WoltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		73989CF02597AF8800BDA7A0 /* WoltTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoltTests.swift; sourceTree = "<group>"; };
+		73989CF02597AF8800BDA7A0 /* WoltLikeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoltLikeManagerTests.swift; sourceTree = "<group>"; };
 		73989CF22597AF8800BDA7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73989CF72597AF8800BDA7A0 /* WoltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73989CFB2597AF8800BDA7A0 /* WoltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoltUITests.swift; sourceTree = "<group>"; };
@@ -151,7 +153,8 @@
 		73989CEF2597AF8800BDA7A0 /* WoltTests */ = {
 			isa = PBXGroup;
 			children = (
-				73989CF02597AF8800BDA7A0 /* WoltTests.swift */,
+				73989CF02597AF8800BDA7A0 /* WoltLikeManagerTests.swift */,
+				7350E19F25A8209600A08260 /* WoltRequestTests.swift */,
 				73989CF22597AF8800BDA7A0 /* Info.plist */,
 			);
 			path = WoltTests;
@@ -360,7 +363,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73989CF12597AF8800BDA7A0 /* WoltTests.swift in Sources */,
+				73989CF12597AF8800BDA7A0 /* WoltLikeManagerTests.swift in Sources */,
+				7350E1A025A8209600A08260 /* WoltRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
